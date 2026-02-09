@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero text-center">
+    <h1>Bienvenido a la Liga de Esports</h1>
+    <p>Compite en los mejores torneos de FIFA y EAFC.</p>
+    {% if not session.get('user_id') %}
+        <a href="/register" class="btn btn-light btn-lg mt-3">¡Únete ahora!</a>
+    {% else %}
+        <a href="/dashboard" class="btn btn-outline-light btn-lg mt-3">Ir al Panel</a>
+    {% endif %}
+</div>
+<div class="row mt-5">
+    <div class="col-md-4">
+        <h3>🏆 Torneos Oficiales</h3>
+        <p>Participa en ligas verificadas.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>💰 Premios en Metálico</h3>
+        <p>Gana dinero demostrando tu habilidad.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>🎮 Comunidad</h3>
+        <p>Juega contra los mejores de tu ciudad.</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow p-4">
+            <h3>Organizar Nuevo Torneo</h3>
+            <form method="POST">
+                <label>Nombre del Evento:</label>
+                <input type="text" name="nombre" class="form-control mb-2" required>
+                
+                <label>Juego:</label>
+                <select name="juego" class="form-select mb-2">
+                    <option>EAFC 24</option>
+                    <option>FIFA 23</option>
+                    <option>eFootball</option>
+                </select>
+                
+                <label>Premio (€):</label>
+                <input type="number" name="premio" class="form-control mb-2" required>
+                
+                <label>Fecha:</label>
+                <input type="date" name="fecha" class="form-control mb-3" required>
+                
+                <button type="submit" class="btn btn-success w-100">Publicar Torneo</button>
+                <a href="/dashboard" class="btn btn-link w-100 text-center">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

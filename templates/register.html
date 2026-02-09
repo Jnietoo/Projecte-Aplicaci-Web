@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card shadow p-4">
+            <h3 class="text-center">Registro de Jugador</h3>
+            <form method="POST">
+                <input type="text" name="usuario" class="form-control mb-3" placeholder="Nombre Usuario" required>
+                <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
+                <input type="password" name="password" class="form-control mb-3" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-success w-100">Registrarse</button>
+            </form>
+            {% if error %} <div class="alert alert-danger mt-3">{{ error }}</div> {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
