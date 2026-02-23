@@ -11,3 +11,5 @@ Esto es lo principal que hace:
 - Portafolio ("About Me"): He añadido una sección donde muestro los otros proyectos que hemos hecho en clase.
 
 - Código limpio: He separado la base de datos en otro archivo (db_module.py) y he usado una plantilla base (base.html) para el menú, así el código es mucho más profesional.
+
+Github: https://github.com/Jnietoo/Projecte-Aplicaci-Web
