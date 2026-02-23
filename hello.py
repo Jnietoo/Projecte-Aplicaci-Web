@@ -102,5 +102,19 @@ def nuevo_torneo():
         
     return render_template("nuevo_torneo.html")
 
+
+@app.route("/eliminar/<int:id>")
+def eliminar(id):
+    # Protegemos la ruta
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    
+    # Borramos el torneo en la base de datos
+    db_module.eliminar_torneo(id)
+    
+    # Recargamos la página del dashboard
+    return redirect(url_for('dashboard'))
+
+    
 if __name__ == "__main__":
     app.run(debug=True)

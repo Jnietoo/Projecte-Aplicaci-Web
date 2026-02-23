@@ -13,6 +13,7 @@
             <th>Juego</th>
             <th>Premio</th>
             <th>Fecha</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +24,9 @@
             <td><span class="badge bg-primary">{{ torneo[2] }}</span></td>
             <td>{{ torneo[3] }}€</td>
             <td>{{ torneo[4] }}</td>
+            <td>
+                <a href="/eliminar/{{ torneo[0] }}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que quieres borrar este torneo?');"> Borrar</a>
+            </td>
         </tr>
         {% endfor %}
     </tbody>

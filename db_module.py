@@ -44,3 +44,16 @@ def crear_torneo(nombre, juego, premio, fecha):
     cursor.execute(sql, (nombre, juego, premio, fecha))
     conn.commit()
     conn.close()
+
+def eliminar_torneo(id_torneo):
+    conn = conectar()
+    cursor = conn.cursor()
+    try:
+        sql = "DELETE FROM torneos WHERE id = %s"
+        cursor.execute(sql, (id_torneo,))
+        conn.commit()
+    except Exception as e:
+        print("Error al borrar:", e)
+    finally:
+        cursor.close()
+        conn.close()
